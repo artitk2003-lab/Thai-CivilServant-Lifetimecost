@@ -10,112 +10,118 @@
 <meta property="og:locale" content="th_TH">
 <meta property="og:site_name" content="ข้าราชการ 1 คน รัฐจ่ายเท่าไหร่">
 <meta property="og:title" content="ข้าราชการ 1 คน รัฐจ่ายเท่าไหร่กันแน่">
-<meta property="og:description" content="ตัวเลข 40 ล้านบาทต่อคนที่เป็นข่าวไม่เคยเผยแพร่วิธีคำนวณ หน้านี้ประกอบวิธีคำนวณขึ้นใหม่จากอัตราจริงตามกฎหมาย แล้วเปิดให้ลากแถบเลื่อนปรับสมมติฐานเอง คำตอบขยับได้ตั้งแต่ 11 ล้านถึงเกิน 90 ล้าน">
+<meta property="og:description" content="ตัวเลข 40 ล้านบาทต่อคนที่เป็นข่าวไม่เคยเผยแพร่วิธีคำนวณ หน้านี้ประกอบวิธีคำนวณขึ้นใหม่จากอัตราจริงตามกฎหมาย เลือกได้ว่ามีคู่สมรสหรือไม่ มีลูกกี่คน พ่อแม่ใช้สิทธิกี่คน แล้วดูว่าคำตอบเปลี่ยนไปแค่ไหน">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="กราฟแท่งสามแท่งเทียบต้นทุนข้าราชการ 1 คน กับเส้นระดับ 40 ล้านบาท">
+<meta property="og:image:alt" content="กราฟเทียบต้นทุนข้าราชการ 1 คน กับเส้นระดับ 40 ล้านบาท">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="ตัวเลข 40 ล้านบาทต่อข้าราชการ 1 คน คำนวณมายังไง ลองปรับสมมติฐานเองได้">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#E8EAE3; --paper-2:#DFE2D9; --ink:#17211C; --ink-2:#4E5A52;
-  --rule:#C2CABC; --green:#2F5D4A; --green-l:#7FA694; --green-p:#B6CCBF;
-  --gold:#9C7B2A; --claim:#CE1F45;
+  --paper:#DFE3D8; --paper-2:#D3D9CB; --card:#EAEDE4;
+  --ink:#131B16; --ink-2:#3F4A42;
+  --rule:#B0BAA9; --green:#27523F; --green-m:#4E8069; --green-l:#8AAE9A; --green-p:#B4CCBD;
+  --gold:#8A6A1E; --gold-l:#B99B4E; --claim:#C11540;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--paper); color:var(--ink);
   font-family:"IBM Plex Sans Thai",system-ui,sans-serif;
-  font-weight:400; line-height:1.62; font-variant-numeric:tabular-nums;
+  font-size:17px; font-weight:500; line-height:1.68; font-variant-numeric:tabular-nums;
 }
-.wrap{max-width:980px;margin:0 auto;padding:0 20px 80px}
-h1,h2,h3{font-weight:600;line-height:1.25;margin:0}
-a{color:var(--green);text-decoration-thickness:1px;text-underline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px 90px}
+h1,h2,h3{font-weight:700;line-height:1.28;margin:0}
+strong{font-weight:700}
 
-/* ---------- masthead ---------- */
-header{padding:56px 0 30px;border-bottom:2px solid var(--ink)}
-h1{font-size:clamp(30px,6.2vw,52px);letter-spacing:-.02em;font-weight:700;max-width:16ch}
-header p{margin:18px 0 0;max-width:60ch;color:var(--ink-2);font-size:16px}
-.byline{margin-top:22px;font-size:13px;color:var(--ink-2)}
+header{padding:56px 0 32px;border-bottom:3px solid var(--ink)}
+h1{font-size:clamp(32px,6.4vw,54px);letter-spacing:-.022em;max-width:16ch}
+header p{margin:20px 0 0;max-width:58ch;color:var(--ink-2)}
+.byline{margin-top:20px;font-size:15px;color:var(--ink-2);font-weight:600}
 
-/* ---------- verdict ---------- */
-.verdict{padding:34px 0 10px}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative}
-.col{padding:16px 14px 0;background:var(--paper-2);border-top:3px solid var(--green);
-     display:flex;flex-direction:column;min-height:230px}
-.col h3{font-size:14px;font-weight:600;color:var(--green)}
-.col .sub{font-size:12px;color:var(--ink-2);line-height:1.45;margin-top:4px;min-height:3.6em}
-.big{font-size:clamp(26px,5.6vw,40px);font-weight:700;letter-spacing:-.03em;margin-top:auto;line-height:1}
-.delta{font-size:13px;font-weight:500;margin-top:8px;color:var(--ink-2)}
-.delta b{font-weight:600;color:var(--claim)}
-.big small{font-size:.44em;font-weight:500;letter-spacing:0;margin-left:5px;color:var(--ink-2)}
-.gauge{height:52px;margin-top:12px;position:relative}
-.gauge .fill{position:absolute;left:0;bottom:0;width:100%;background:var(--green);transition:height .35s cubic-bezier(.22,.7,.3,1)}
-.gauge .track{position:absolute;inset:0;background:var(--paper);}
-.claimline{position:absolute;left:0;right:0;border-top:2px dashed var(--claim);pointer-events:none}
-.claimtag{display:flex;align-items:baseline;gap:8px;margin-top:14px;font-size:13px;color:var(--claim);font-weight:600}
-.claimtag i{display:block;width:26px;border-top:2px dashed var(--claim);font-style:normal;position:relative;top:-4px}
+/* verdict */
+.verdict{padding:36px 0 4px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.col{padding:22px 22px 20px;background:var(--card);border-top:4px solid var(--green)}
+.col h3{font-size:17px;color:var(--green)}
+.col .sub{font-size:14.5px;color:var(--ink-2);line-height:1.5;margin-top:6px;min-height:3em;font-weight:500}
+.big{font-size:clamp(38px,7.6vw,60px);font-weight:700;letter-spacing:-.035em;margin-top:16px;line-height:1}
+.big small{font-size:.36em;font-weight:600;letter-spacing:0;margin-left:8px;color:var(--ink-2)}
+.delta{font-size:15px;font-weight:600;margin-top:10px;color:var(--ink-2)}
+.delta b{font-weight:700;color:var(--claim)}
+.barwrap{margin-top:16px;height:16px;background:var(--paper-2);position:relative;overflow:hidden}
+.barwrap .fill{height:100%;background:var(--green);transition:width .35s cubic-bezier(.22,.7,.3,1)}
+.barwrap .mark{position:absolute;top:0;bottom:0;width:0;border-left:3px dashed var(--claim)}
+.scalenote{font-size:13.5px;color:var(--claim);font-weight:600;margin-top:8px}
 
-/* ---------- controls ---------- */
-section{padding-top:46px}
-.eyebrow{font-size:13px;font-weight:600;color:var(--green);margin:0 0 6px}
-h2{font-size:22px;letter-spacing:-.01em}
-.lede{margin:8px 0 22px;color:var(--ink-2);max-width:62ch;font-size:15px}
-.tabs{display:flex;gap:0;border:1.5px solid var(--ink);width:fit-content;max-width:100%;flex-wrap:wrap}
-.tabs button{font:inherit;font-size:14px;font-weight:500;padding:9px 16px;border:0;
-  border-right:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
-.tabs button:last-child{border-right:0}
+section{padding-top:52px}
+.eyebrow{font-size:14px;font-weight:700;color:var(--green);margin:0 0 6px;letter-spacing:.01em}
+h2{font-size:25px;letter-spacing:-.012em}
+.lede{margin:10px 0 24px;color:var(--ink-2);max-width:60ch}
+
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{font:inherit;font-size:15px;font-weight:600;padding:9px 16px;
+  border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
 .tabs button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.tabs button:focus-visible{outline:2px solid var(--claim);outline-offset:2px}
+.tabs button:focus-visible{outline:3px solid var(--claim);outline-offset:2px}
 
-.knobs{display:grid;grid-template-columns:1fr 1fr;gap:26px 34px;margin-top:26px}
-.knob label{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:14px}
-.knob .val{font-weight:600;font-size:15px;white-space:nowrap}
-.knob .hint{font-size:12px;color:var(--ink-2);margin-top:2px}
-input[type=range]{width:100%;margin:8px 0 0;-webkit-appearance:none;appearance:none;background:transparent;height:22px}
-input[type=range]::-webkit-slider-runnable-track{height:3px;background:var(--rule)}
-input[type=range]::-moz-range-track{height:3px;background:var(--rule)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;
-  background:var(--green);border:3px solid var(--paper);margin-top:-9px;cursor:grab}
-input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--green);border:3px solid var(--paper);cursor:grab}
-input[type=range]:focus-visible::-webkit-slider-thumb{outline:2px solid var(--claim);outline-offset:2px}
+.knobs{display:grid;grid-template-columns:1fr 1fr;gap:28px 38px;margin-top:28px}
+.knob label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:16px;font-weight:600}
+.knob .val{font-weight:700;white-space:nowrap}
+.knob .hint{font-size:14px;color:var(--ink-2);margin-top:3px;line-height:1.5;font-weight:500}
+input[type=range]{width:100%;margin:10px 0 0;-webkit-appearance:none;appearance:none;background:transparent;height:24px}
+input[type=range]::-webkit-slider-runnable-track{height:4px;background:var(--rule)}
+input[type=range]::-moz-range-track{height:4px;background:var(--rule)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;
+  background:var(--green);border:4px solid var(--paper);margin-top:-10px;cursor:grab}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--green);border:4px solid var(--paper);cursor:grab}
 .starred input[type=range]::-webkit-slider-thumb{background:var(--claim)}
 .starred input[type=range]::-moz-range-thumb{background:var(--claim)}
-.reset{font:inherit;font-size:13px;background:none;border:0;border-bottom:1px solid var(--rule);
-  padding:0 0 2px;color:var(--ink-2);cursor:pointer;margin-top:24px}
+.seg{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.seg button{font:inherit;font-size:15px;font-weight:600;padding:7px 18px;border:2px solid var(--rule);
+  background:transparent;color:var(--ink-2);cursor:pointer}
+.seg button[aria-pressed="true"]{border-color:var(--green);background:var(--green);color:#fff}
+.reset{font:inherit;font-size:15px;font-weight:600;background:none;border:0;border-bottom:2px solid var(--rule);
+  padding:0 0 3px;color:var(--ink-2);cursor:pointer;margin-top:28px}
 
-/* ---------- breakdown ---------- */
-.stack{display:flex;height:34px;width:100%;margin:6px 0 14px;overflow:hidden}
+.stack{display:flex;height:40px;width:100%;margin:8px 0 18px;overflow:hidden}
 .stack div{height:100%}
-.legend{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:2px 22px;font-size:14px}
-.legend .row{display:flex;align-items:baseline;gap:9px;padding:5px 0;border-bottom:1px solid var(--rule)}
-.legend .sw{width:11px;height:11px;flex:0 0 11px;position:relative;top:1px}
+.legend{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:0 28px}
+.legend .row{display:flex;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.legend .sw{width:13px;height:13px;flex:0 0 13px;position:relative;top:2px}
 .legend .nm{flex:1}
-.legend .amt{font-weight:600}
+.legend .amt{font-weight:700}
+
+table.med{width:100%;border-collapse:collapse;margin-top:6px}
+.tablewrap{overflow-x:auto}
+table.med th,table.med td{text-align:right;padding:11px 8px;border-bottom:1px solid var(--rule);font-size:16.5px}
+table.med th{font-weight:700;font-size:14.5px;color:var(--ink-2)}
+table.med th:first-child,table.med td:first-child{text-align:left}
+table.med tr.tot td{font-weight:700;border-top:2px solid var(--ink);border-bottom:0}
+table.med td.n{font-weight:600}
+
 figure{margin:0}
-figcaption{font-size:13px;color:var(--ink-2);margin-top:10px;max-width:62ch}
+figcaption{font-size:15px;color:var(--ink-2);margin-top:12px;max-width:62ch}
 svg{display:block;width:100%;height:auto}
 
-/* ---------- notes ---------- */
-.notes{border-top:2px solid var(--ink);margin-top:56px;padding-top:26px;
-  display:grid;grid-template-columns:1fr 1fr;gap:30px 40px}
-.notes h3{font-size:15px;margin-bottom:8px}
-.notes p,.notes li{font-size:14px;color:var(--ink-2);margin:0 0 10px}
-.notes ul{padding-left:18px;margin:0}
-.notes li{margin-bottom:7px}
-@media(max-width:720px){
-  .cols{grid-template-columns:1fr;gap:10px}
-  .col{min-height:0;padding-bottom:14px}
+.notes{border-top:3px solid var(--ink);margin-top:60px;padding-top:30px;
+  display:grid;grid-template-columns:1fr 1fr;gap:34px 44px}
+.notes h3{font-size:18px;margin-bottom:10px}
+.notes p,.notes li{font-size:15.5px;color:var(--ink-2);margin:0 0 12px;line-height:1.62}
+.notes ul{padding-left:20px;margin:0}
+.notes li{margin-bottom:9px}
+@media(max-width:760px){
+  body{font-size:16.5px}
+  .cols{grid-template-columns:1fr;gap:12px}
   .col .sub{min-height:0}
-  .big{margin-top:12px}
-  .gauge{display:none}
-  .knobs{grid-template-columns:1fr;gap:22px}
+  .knobs{grid-template-columns:1fr;gap:24px}
   .notes{grid-template-columns:1fr}
-  header{padding-top:36px}
+  header{padding-top:38px}
+  .tabs button{flex:1 1 auto;padding:9px 10px;font-size:14px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -123,59 +129,63 @@ svg{display:block;width:100%;height:auto}
 <div class="wrap">
 <header>
   <h1>ข้าราชการ 1 คน รัฐจ่ายเท่าไหร่กันแน่</h1>
-  <p>มีการพูดถึงตัวเลข “คนละประมาณ 40 ล้านบาท ตั้งแต่วันบรรจุจนวันเสียชีวิต” แต่ไม่มีการเผยแพร่วิธีคำนวณ
-     หน้านี้ประกอบวิธีคำนวณขึ้นใหม่จากอัตราจริงตามกฎหมาย แล้วเปิดให้ลองปรับสมมติฐานเอง
-     คำตอบขยับได้ตั้งแต่ประมาณ 11 ล้านถึงเกิน 90 ล้าน โดยที่สิ่งที่รัฐให้ข้าราชการยังเท่าเดิมทุกประการ</p>
-  <p class="byline">ลากแถบเลื่อนแล้วตัวเลขจะเปลี่ยนทันที · เส้นประสีแดงคือระดับ 40 ล้านบาทที่เป็นข่าว</p>
+  <p>มีการพูดถึงตัวเลข “คนละประมาณ 40 ล้านบาท ตั้งแต่วันบรรจุจนวันเสียชีวิต” แต่ไม่เคยมีการเผยแพร่วิธีคำนวณ
+     หน้านี้ประกอบวิธีคำนวณขึ้นใหม่จากอัตราจริงตามกฎหมาย แล้วเปิดให้ปรับสมมติฐานเอง
+     จะมีคู่สมรสหรือไม่ มีลูกกี่คน พ่อแม่ใช้สิทธิกี่คน อายุยืนแค่ไหน</p>
+  <p class="byline">ลากแถบเลื่อนแล้วตัวเลขเปลี่ยนทันที · เส้นประแดงคือระดับ 40 ล้านบาทที่เป็นข่าว</p>
 </header>
 
 <div class="verdict">
-  <div class="cols" id="cols">
+  <div class="cols">
     <div class="col">
-      <h3>เงินสดที่จ่ายจริง</h3>
-      <div class="sub">บวกเงินบาทที่โอนออกจากคลังทุกปีตรง ๆ ไม่ปรับเงินเฟ้อ</div>
-      <div class="gauge"><div class="track"></div><div class="fill" id="g0"></div></div>
+      <h3>เงินสดที่รัฐจ่ายจริง</h3>
+      <div class="sub">บวกเงินบาทที่โอนออกจากคลังทุกปีตรง ๆ ตามที่จะจ่ายจริงในอนาคต</div>
       <div class="big"><span id="n0">–</span><small>ล้านบาท</small></div>
+      <div class="barwrap"><div class="fill" id="f0"></div><div class="mark" id="m0"></div></div>
       <div class="delta" id="d0"></div>
     </div>
     <div class="col">
-      <h3>คิดเป็นราคาวันนี้</h3>
-      <div class="sub">ปรับเงินเฟ้อกลับมาเป็นกำลังซื้อปี 2569 เทียบกับเงินเดือนวันนี้ได้ตรงกว่า</div>
-      <div class="gauge"><div class="track"></div><div class="fill" id="g1"></div></div>
+      <h3>คิดเป็นราคาปี 2569</h3>
+      <div class="sub">ปรับเงินเฟ้อกลับมาเป็นกำลังซื้อวันนี้ เทียบกับเงินเดือนวันนี้ได้ตรงกว่า</div>
       <div class="big"><span id="n1">–</span><small>ล้านบาท</small></div>
+      <div class="barwrap"><div class="fill" id="f1"></div><div class="mark" id="m1"></div></div>
       <div class="delta" id="d1"></div>
     </div>
-    <div class="col">
-      <h3>เงินที่ต้องกันไว้วันนี้</h3>
-      <div class="sub">มูลค่าปัจจุบันของภาระทั้งหมด เป็นวิธีที่ใช้กันในงานการคลัง</div>
-      <div class="gauge"><div class="track"></div><div class="fill" id="g2"></div></div>
-      <div class="big"><span id="n2">–</span><small>ล้านบาท</small></div>
-      <div class="delta" id="d2"></div>
-    </div>
-    <div class="claimline" id="cline" hidden></div>
   </div>
-  <div class="claimtag"><i></i><span>ระดับ 40 ล้านบาทที่เป็นข่าว</span></div>
+  <p class="scalenote" id="scalenote"></p>
 </div>
 
 <section>
   <p class="eyebrow">เลือกคนที่จะคำนวณ</p>
-  <h2>ข้าราชการคนไหน</h2>
-  <p class="lede">ต้นทุนของผู้น้อยกับผู้บริหารต่างกันกว่าสองเท่า การพูดว่า “เฉลี่ยคนละ 40 ล้าน” จึงกลบความต่างนี้ไปทั้งหมด</p>
-  <div class="tabs" role="group" aria-label="เลือกกรณี">
-    <button data-p="0" aria-pressed="false">ชั้นผู้น้อย</button>
-    <button data-p="1" aria-pressed="true">ระดับกลาง</button>
-    <button data-p="2" aria-pressed="false">ผู้ใหญ่ ซี 9–10</button>
-  </div>
-  <p class="lede" id="pdesc" style="margin-top:16px"></p>
-
+  <h2>ข้าราชการระดับไหน</h2>
+  <p class="lede">ต้นทุนของผู้น้อยกับผู้บริหารต่างกันกว่าสองเท่า การพูดว่า “เฉลี่ยคนละ 40 ล้าน” จึงกลบความต่างนี้ไปทั้งหมด
+     ตัวเลขในหน้านี้ใช้บัญชีเงินเดือนข้าราชการพลเรือนเป็นฐาน ส่วนราชการอื่นมีบัญชีและเงินเพิ่มของตัวเอง แต่ใช้สูตรบำนาญและสิทธิรักษาพยาบาลชุดเดียวกัน</p>
+  <div class="tabs" id="tabs" role="group" aria-label="เลือกกรณี"></div>
+  <p class="lede" id="pdesc" style="margin-top:18px"></p>
   <div class="knobs" id="knobs"></div>
   <button class="reset" id="reset">คืนค่าตั้งต้นของกรณีนี้</button>
 </section>
 
 <section>
+  <p class="eyebrow">คำถามที่ถามกันบ่อย</p>
+  <h2>ค่ารักษาพยาบาลพ่อแม่ รวมอยู่ด้วยหรือเปล่า</h2>
+  <p class="lede">รวมอยู่ด้วย เพราะสิทธิเบิกจ่ายตรงครอบคลุมบิดามารดาของข้าราชการเอง (เบิกให้พ่อแม่ของคู่สมรสไม่ได้)
+     ค่ารักษาในแบบจำลองนี้คิดตาม<strong>อายุจริงของแต่ละคน</strong> ไม่ได้ใช้อัตราเดียวเหมารวม
+     เพราะคนอายุ 85 ใช้ค่ารักษาสูงกว่าคนอายุ 60 หลายเท่า
+     ให้ดูคอลัมน์ราคาปี 2569 เป็นหลัก เพราะเทียบกันได้ตรงกว่า</p>
+  <div class="tablewrap"><table class="med">
+    <thead><tr><th>ผู้ใช้สิทธิ</th><th>จำนวน</th><th>ราคาปี 2569</th><th>ตัวเงินจริง</th><th>สัดส่วน<br>(ราคาปี 2569)</th><th>ใช้สิทธิรวม</th></tr></thead>
+    <tbody id="medbody"></tbody>
+  </table></div>
+  <p class="lede" id="mednote" style="margin-top:20px"></p>
+  <p class="lede" id="medcal" style="margin-top:14px"></p>
+</section>
+
+<section>
   <p class="eyebrow">เงินก้อนนี้ไปไหนบ้าง</p>
   <h2>องค์ประกอบของต้นทุน</h2>
-  <p class="lede">คิดจากคอลัมน์ “เงินสดที่จ่ายจริง” เงินเดือนคือก้อนใหญ่สุดเสมอ แต่ก้อนที่โตเร็วที่สุดคือค่ารักษาพยาบาลหลังเกษียณ</p>
+  <p class="lede">คิดแบบเงินสดที่จ่ายจริง เงินเดือนคือก้อนใหญ่สุดเสมอ แต่ก้อนที่โตเร็วที่สุดคือค่ารักษาพยาบาลหลังเกษียณ
+     เพราะผู้สูงอายุใช้จ่ายสูงและค่ารักษาขึ้นเร็วกว่าเงินเฟ้อทั่วไปทุกปี</p>
   <div class="stack" id="stack"></div>
   <div class="legend" id="legend"></div>
 </section>
@@ -192,223 +202,297 @@ svg{display:block;width:100%;height:auto}
 <div class="notes">
   <div>
     <h3>วิธีคำนวณ</h3>
-    <p>ไล่ทีละปีตั้งแต่วันบรรจุถึงวันเสียชีวิต ช่วงรับราชการนับเงินเดือน เงินประจำตำแหน่ง เงินสมทบ กบข.
-       ที่รัฐจ่าย 5% ค่าเช่าบ้าน ค่าการศึกษาบุตร และค่ารักษาพยาบาลของตนเอง คู่สมรส บุตร บิดามารดา</p>
+    <p>ไล่ทีละปีตั้งแต่วันบรรจุถึงวันเสียชีวิต ช่วงรับราชการนับเงินเดือน เงินประจำตำแหน่งและเงินเพิ่มพิเศษ
+       เงินสมทบ กบข. ที่รัฐจ่าย 5% ค่าเช่าบ้าน ค่าการศึกษาบุตร และค่ารักษาพยาบาลของตนเอง คู่สมรส บุตร บิดามารดา</p>
     <p>หลังเกษียณใช้สูตรบำนาญตามกฎหมาย คือเงินเดือนเฉลี่ย 60 เดือนสุดท้าย คูณเวลาราชการ หารด้วย 50
        เพดาน 70% แล้วบวกบำเหน็จดำรงชีพ บำเหน็จตกทอด 30 เท่า เงินช่วยพิเศษค่าทำศพ 3 เท่า
-       และค่ารักษาพยาบาลที่ใช้ต่อได้ตลอดชีวิต</p>
-    <p>เงินเดือนโตด้วยอัตราที่คำนวณย้อนกลับจากเงินเดือนแรกบรรจุกับเงินเดือนสุดท้าย
+       และค่ารักษาพยาบาลที่ตนเองกับคู่สมรสใช้สิทธิต่อได้ตลอดชีวิต</p>
+    <p>ค่ารักษาพยาบาลคิดตามอายุจริงของแต่ละคน ตั้งแต่ราว 6,000 บาทต่อปีสำหรับเด็ก ไปจนถึง 60,000 บาทต่อปีสำหรับผู้สูงอายุมาก
        บำนาญไม่ปรับตามเงินเฟ้อ เพราะระบบไทยไม่มีกลไกปรับอัตโนมัติ</p>
   </div>
   <div>
     <h3>ข้อจำกัดที่ควรรู้</h3>
     <ul>
       <li>เป็นด้านรายจ่ายล้วน ไม่หักภาษีเงินได้ที่ข้าราชการจ่ายคืนรัฐ และไม่ตีมูลค่าบริการสาธารณะที่ผลิตออกมา</li>
-      <li>ไม่รวมค่าสำนักงาน ครุภัณฑ์ ค่าฝึกอบรม ตัวเลขจริงจึงสูงกว่านี้</li>
+      <li>ไม่รวมค่าสำนักงาน ครุภัณฑ์ ค่าฝึกอบรมระหว่างประจำการ ตัวเลขจริงจึงสูงกว่านี้</li>
       <li>อัตราค่ารักษาพยาบาลต่อหัวเป็นการประมาณ สอบเทียบกับยอดเบิกจริง 1.06 แสนล้านบาทต่อผู้มีสิทธิราว 5 ล้านคน</li>
+      <li>ตัวคูณค่ารักษาตามช่วงอายุเป็นรูปโค้งที่ผู้จัดทำกำหนดเอง สอบเทียบกับค่าเฉลี่ยรวมได้ แต่ไม่ใช่ตารางทางการรายช่วงอายุ</li>
+      <li>ใช้บัญชีเงินเดือนข้าราชการพลเรือนเป็นฐาน ส่วนราชการที่มีบัญชีเงินเดือนและเงินเพิ่มของตัวเองจะต่างออกไปบ้าง</li>
       <li>ตัวเลขนี้คือผลรวมสะสม 55–62 ปี เอาไปเทียบกับงบประมาณปีเดียวไม่ได้</li>
     </ul>
-    <h3 style="margin-top:18px">ที่มาของอัตราที่ใช้</h3>
-    <p>บัญชีเงินเดือนและอัตราแรกบรรจุ 1 พ.ค. 2568 จากสำนักงาน ก.พ. · สูตรบำนาญตาม พ.ร.บ. กบข. 2539 ·
-       บำเหน็จดำรงชีพตามกฎกระทรวง 2562 · ยอดค่ารักษาพยาบาลจากกรมบัญชีกลาง ·
-       จำนวนข้าราชการ 1.73 ล้านคนจากสำนักงบประมาณของรัฐสภา</p>
+    <h3 style="margin-top:20px">ที่มาของอัตราที่ใช้</h3>
+    <p>บัญชีเงินเดือนและอัตราแรกบรรจุ 1 พ.ค. 2568 จากสำนักงาน ก.พ. ·
+       สูตรบำนาญตาม พ.ร.บ. กองทุนบำเหน็จบำนาญข้าราชการ พ.ศ. 2539 ·
+       บำเหน็จดำรงชีพตามกฎกระทรวง พ.ศ. 2562 ·
+       ยอดค่ารักษาพยาบาลและจำนวนผู้มีสิทธิจากกรมบัญชีกลาง ·
+       จำนวนข้าราชการและโครงสร้างงบประมาณจากสำนักงบประมาณของรัฐสภา</p>
   </div>
 </div>
 </div>
 
 <script>
-const PRESETS = [
- {name:"ชั้นผู้น้อย", desc:"ประเภททั่วไป บรรจุด้วยวุฒิ ปวส. ไต่ถึงระดับชำนาญงานแล้วตัน คู่สมรสมีสิทธิรักษาพยาบาลของตนเอง บุตร 1 คน ดูแลพ่อหรือแม่ 1 คน",
-  age0:22, ageD:78, sal0:13920, sal1:36000, pos1:0,pos1y:999, pos2:0,pos2y:999,
-  oth:.03, rent:0, renty:0, edu:12000, nkid:1, eduy0:10, eduyn:15,
-  mSelf:1, mKid:1, mKid0:10, mKid1:29, mPar:1, mPar0:1, mPar1:20, mRet:1, mY:8000, mO:25000},
- {name:"ระดับกลาง", desc:"ประเภทวิชาการ บรรจุด้วยวุฒิ ป.ตรี เกษียณระดับชำนาญการพิเศษ ซึ่งเป็นระดับที่คนส่วนใหญ่ไปถึง มีคู่สมรส บุตร 2 คน และบิดามารดาใช้สิทธิ",
-  age0:25, ageD:82, sal0:18220, sal1:52000, pos1:3500,pos1y:8, pos2:5600,pos2y:20,
-  oth:.03, rent:4000, renty:10, edu:25000, nkid:2, eduy0:8, eduyn:18,
-  mSelf:2, mKid:2, mKid0:8, mKid1:27, mPar:2, mPar0:1, mPar1:22, mRet:2, mY:8000, mO:25000},
- {name:"ผู้ใหญ่ ซี 9–10", desc:"บรรจุด้วยวุฒิ ป.โท ขึ้นถึงระดับเชี่ยวชาญหรืออำนวยการสูง ได้ทั้งเงินประจำตำแหน่งและค่าตอบแทนรายเดือนอีกก้อน",
-  age0:24, ageD:85, sal0:21180, sal1:74000, pos1:5600,pos1y:12, pos2:20000,pos2y:24,
-  oth:.04, rent:5000, renty:12, edu:25000, nkid:2, eduy0:8, eduyn:18,
-  mSelf:2, mKid:2, mKid0:8, mKid1:27, mPar:2, mPar0:1, mPar1:22, mRet:2, mY:9000, mO:28000}
-];
-const GLOBAL = {infl:.02, minf:.02, disc:.04, padj:0, ageR:60, cap:.70, div:50,
-  chkb:11000, d1:200000, d2:500000, k15:15, k30:30, k3:3, gpf:.05};
+const MEDBANDS=[[0,.6],[20,.8],[45,1.4],[60,2.8],[70,4.5],[80,6.0]];
+const MEDBASE=10000;
+function medMult(a){let m=.6; for(const[lo,v] of MEDBANDS) if(a>=lo) m=v; return m;}
 
-const KNOBS = [
- {k:"infl", g:1, label:"อัตราเงินเฟ้อ", min:0, max:.04, step:.0025, star:1,
-  fmt:v=>(v*100).toFixed(2)+"%", hint:"ตัวแปรที่เปลี่ยนคำตอบมากที่สุด กรอบเป้าหมาย ธปท. คือ 1–3%"},
- {k:"sal1", g:0, label:"เงินเดือนเดือนสุดท้ายก่อนเกษียณ", min:20000, max:76800, step:500,
-  fmt:v=>Math.round(v).toLocaleString("th-TH")+" บาท", hint:"เพดานสูงสุดของข้าราชการพลเรือนคือ 76,800 บาท"},
- {k:"ageD", g:0, label:"อายุที่เสียชีวิต", min:62, max:95, step:1,
-  fmt:v=>v+" ปี", hint:"ยิ่งอายุยืน ยิ่งจ่ายบำนาญและค่ารักษาพยาบาลนานขึ้น"},
- {k:"age0", g:0, label:"อายุแรกบรรจุ", min:20, max:40, step:1,
-  fmt:v=>v+" ปี", hint:"บรรจุเร็วแปลว่าอายุราชการยาว บำนาญสูงขึ้น"},
- {k:"mO", g:0, label:"ค่ารักษาพยาบาลผู้สูงอายุ ต่อคนต่อปี", min:10000, max:60000, step:1000,
-  fmt:v=>Math.round(v).toLocaleString("th-TH")+" บาท", hint:"ค่าเฉลี่ยจริงทั้งระบบทุกช่วงอายุอยู่ที่ราว 21,200 บาท"},
- {k:"disc", g:1, label:"อัตราคิดลด", min:.01, max:.07, step:.0025,
-  fmt:v=>(v*100).toFixed(2)+"%", hint:"ใช้เฉพาะคอลัมน์เงินที่ต้องกันไว้วันนี้ ประมาณผลตอบแทนพันธบัตร"}
+const PRESETS=[
+{name:"ชั้นผู้น้อย",
+ desc:"ประเภททั่วไป บรรจุด้วยวุฒิ ปวส. ไต่ถึงระดับชำนาญงานแล้วตัน ไม่มีเงินประจำตำแหน่ง เกษียณด้วยเงินเดือนราว 36,000 บาท",
+ age0:22,ageD:78,sal0:13920,sal1:36000,pos1:0,pos1y:999,pos2:0,pos2y:999,
+ oth:.03,rent:0,renty:0,edu:12000,eduy0:10,eduyn:15,
+ spouse:0,nkid:1,kidBorn:10,nPar:1,parGap:28,parDie:80,medF:1},
+{name:"ระดับกลาง",
+ desc:"ประเภทวิชาการ บรรจุด้วยวุฒิ ป.ตรี เกษียณระดับชำนาญการพิเศษ ซึ่งเป็นระดับที่คนส่วนใหญ่ไปถึง เพดานระดับนี้คือ 58,390 บาท",
+ age0:25,ageD:82,sal0:18220,sal1:52000,pos1:3500,pos1y:8,pos2:5600,pos2y:20,
+ oth:.03,rent:4000,renty:10,edu:25000,eduy0:8,eduyn:18,
+ spouse:1,nkid:2,kidBorn:8,nPar:2,parGap:28,parDie:82,medF:1},
+{name:"ระดับสูง เทียบซี 9–10",
+ desc:"บรรจุด้วยวุฒิ ป.โท ขึ้นถึงระดับเชี่ยวชาญหรืออำนวยการสูง ได้ทั้งเงินประจำตำแหน่งและค่าตอบแทนรายเดือนอีกก้อนเท่ากัน",
+ age0:24,ageD:85,sal0:21180,sal1:74000,pos1:5600,pos1y:12,pos2:20000,pos2y:24,
+ oth:.04,rent:5000,renty:12,edu:25000,eduy0:8,eduyn:18,
+ spouse:1,nkid:2,kidBorn:8,nPar:2,parGap:28,parDie:82,medF:1}
+];
+const GLOBAL={infl:.02,minf:.02,padj:0,ageR:60,cap:.70,div:50,chkb:11000,
+  d1:200000,d2:500000,k15:15,k30:30,k3:3,gpf:.05};
+
+const KNOBS=[
+ {k:"infl",g:1,type:"range",label:"อัตราเงินเฟ้อ",min:0,max:.04,step:.0025,star:1,
+  fmt:v=>(v*100).toFixed(2)+"%",hint:"ตัวแปรที่เปลี่ยนคำตอบมากที่สุด กรอบเป้าหมายของ ธปท. คือ 1–3%"},
+ {k:"sal1",g:0,type:"range",label:"เงินเดือนเดือนสุดท้ายก่อนเกษียณ",min:20000,max:76800,step:500,
+  fmt:v=>Math.round(v).toLocaleString("th-TH")+" บาท",hint:"เพดานสูงสุดของข้าราชการไทยคือ 76,800 บาท"},
+ {k:"spouse",g:0,type:"seg",label:"มีคู่สมรสที่ใช้สิทธิของเราหรือไม่",
+  opts:[["ไม่มี",0],["มี",1]],hint:"คู่สมรสที่มีสิทธิของตัวเองอยู่แล้ว เช่น เป็นข้าราชการเหมือนกัน ให้เลือกไม่มี"},
+ {k:"nkid",g:0,type:"seg",label:"จำนวนบุตร",
+  opts:[["ไม่มี",0],["1 คน",1],["2 คน",2],["3 คน",3]],hint:"มีผลทั้งค่ารักษาพยาบาลและค่าการศึกษาบุตร เบิกได้ไม่เกิน 3 คน"},
+ {k:"nPar",g:0,type:"seg",label:"บิดามารดาที่ใช้สิทธิ",
+  opts:[["ไม่มี",0],["1 คน",1],["2 คน",2]],hint:"เบิกให้พ่อแม่ของตนเองได้ แต่เบิกให้พ่อแม่ของคู่สมรสไม่ได้"},
+ {k:"parDie",g:0,type:"range",label:"อายุที่บิดามารดาเสียชีวิต",min:65,max:95,step:1,
+  fmt:v=>v+" ปี",hint:"ยิ่งพ่อแม่อายุยืน ยิ่งใช้สิทธิยาวและอยู่ในช่วงอายุที่ค่ารักษาแพงที่สุด"},
+ {k:"medF",g:0,type:"range",label:"ระดับค่ารักษาพยาบาล เทียบค่ามาตรฐาน",min:.6,max:2,step:.05,
+  fmt:v=>v.toFixed(2)+" เท่า",hint:"ใช้ทดสอบว่าถ้าค่ารักษาจริงแพงหรือถูกกว่าที่ตั้งไว้ ผลลัพธ์จะเปลี่ยนไปแค่ไหน ค่ามาตรฐานสอบเทียบกับยอดเบิกจริงทั้งระบบแล้ว"},
+ {k:"pos1",g:0,type:"range",label:"เงินเพิ่มพิเศษ/เงินประจำตำแหน่ง ช่วงต้น",min:0,max:15000,step:500,
+  fmt:v=>v?Math.round(v).toLocaleString("th-TH")+" บาท/เดือน":"ไม่มี",
+  hint:"เงินประจำตำแหน่งระดับชำนาญการ 3,500 บาท ชำนาญการพิเศษ 5,600 บาท บางสายงานมีเงินเพิ่มสำหรับตำแหน่งที่มีเหตุพิเศษอีกต่างหาก"},
+ {k:"pos2",g:0,type:"range",label:"เงินเพิ่มพิเศษ/เงินประจำตำแหน่ง ช่วงปลาย",min:0,max:25000,step:500,
+  fmt:v=>v?Math.round(v).toLocaleString("th-TH")+" บาท/เดือน":"ไม่มี",
+  hint:"ระดับเชี่ยวชาญและอำนวยการสูงได้เงินประจำตำแหน่ง 10,000 บาท และค่าตอบแทนรายเดือนอีก 10,000 บาท"},
+ {k:"ageD",g:0,type:"range",label:"อายุที่เสียชีวิต",min:62,max:95,step:1,
+  fmt:v=>v+" ปี",hint:"ยิ่งอายุยืน ยิ่งจ่ายบำนาญและค่ารักษาพยาบาลนานขึ้น"},
+ {k:"age0",g:0,type:"range",label:"อายุแรกบรรจุ",min:20,max:40,step:1,
+  fmt:v=>v+" ปี",hint:"บรรจุเร็วแปลว่าอายุราชการยาว บำนาญสูงขึ้นจนชนเพดาน 70%"},
+
 ];
 
-let pi = 1, P = {...PRESETS[1]}, G = {...GLOBAL};
+let pi=1,P={...PRESETS[1]},G={...GLOBAL};
 
 function model(p,g){
-  const ns = g.ageR - p.age0;
-  const N  = p.ageD - p.age0 + 1;
-  if(ns < 6 || N < ns+1) return null;
-  const grow = Math.pow(p.sal1/p.sal0, 1/(ns-1)) - 1;
-  const salm = t => p.sal0*Math.pow(1+grow,t-1)*Math.pow(1+g.infl,t-1);
-  let a=0; for(let t=ns-4;t<=ns;t++) a += salm(t);
-  const avg5 = a/5;
-  const pen  = Math.min(avg5*ns/g.div, avg5*g.cap);
-  const ck   = Math.max(0, g.chkb-pen);
-  const PN   = pen+ck;
-  const dl1  = Math.min(pen*g.k15, g.d1);
-  const dlT  = Math.min(pen*g.k15, g.d2);
-  const takd = Math.max(0, PN*g.k30 - dlT);
-  const fune = PN*g.k3;
+  const ns=g.ageR-p.age0, N=p.ageD-p.age0+1;
+  if(ns<6||N<ns+1) return null;
+  const grow=Math.pow(p.sal1/p.sal0,1/(ns-1))-1;
+  const salm=t=>p.sal0*Math.pow(1+grow,t-1)*Math.pow(1+g.infl,t-1);
+  let a=0; for(let t=ns-4;t<=ns;t++) a+=salm(t);
+  const avg5=a/5;
+  const pen=Math.min(avg5*ns/g.div, avg5*g.cap);
+  const PN=pen+Math.max(0,g.chkb-pen);
+  const dl1=Math.min(pen*g.k15,g.d1), dlT=Math.min(pen*g.k15,g.d2);
+  const takd=Math.max(0,PN*g.k30-dlT), fune=PN*g.k3;
 
-  const rows=[], sum={sal:0,pos:0,gpf:0,rent:0,edu:0,oth:0,medW:0,medR:0,pen:0,lump:0};
-  let nom=0, real=0, pv=0;
+  const rows=[], s={sal:0,pos:0,gpf:0,rent:0,edu:0,oth:0,
+                    medSelf:0,medKid:0,medPar:0,medW:0,medR:0,pen:0,lump:0};
+  const rl={medSelf:0,medKid:0,medPar:0};   // ราคาปี 2569
+  const py={medSelf:0,medKid:0,medPar:0};   // คน-ปี
+  let nom=0, real=0;
   for(let t=1;t<=N;t++){
     const age=p.age0+t-1, w=age<g.ageR;
     const px=Math.pow(1+g.infl,t-1), mx=Math.pow((1+g.infl)*(1+g.minf),t-1);
-    const sal = w? salm(t)*12 : 0;
-    const pos = w? (t>=p.pos2y?p.pos2 : t>=p.pos1y?p.pos1 : 0)*12*px : 0;
-    const gpf = sal*g.gpf;
-    const rnt = (w && t<=p.renty)? p.rent*12*px : 0;
-    const edu = (w && t>=p.eduy0 && t<p.eduy0+p.eduyn)? p.edu*p.nkid*px : 0;
-    const oth = sal*p.oth;
-    const ny  = w? p.mSelf + ((t>=p.mKid0&&t<=p.mKid1)?p.mKid:0) : 0;
-    const no  = ((t>=p.mPar0&&t<=p.mPar1)?p.mPar:0) + (w?0:p.mRet);
-    const med = (ny*p.mY + no*p.mO)*mx;
-    const pn  = w? 0 : PN*12*Math.pow(1+g.padj, t-ns-1);
-    let lump = 0;
-    if(age===g.ageR) lump += dl1;
-    if(age===65 && !w) lump += dlT-dl1;
-    if(t===N) lump += takd+fune;
-    const tot = sal+pos+gpf+rnt+edu+oth+med+pn+lump;
-    sum.sal+=sal; sum.pos+=pos; sum.gpf+=gpf; sum.rent+=rnt; sum.edu+=edu; sum.oth+=oth;
-    if(w) sum.medW+=med; else sum.medR+=med;
-    sum.pen+=pn; sum.lump+=lump;
-    nom+=tot; real+=tot/px; pv+=tot/Math.pow(1+g.disc,t-1);
+    const sal=w? salm(t)*12:0;
+    const pos=w? (t>=p.pos2y?p.pos2 : t>=p.pos1y?p.pos1:0)*12*px : 0;
+    const gpf=sal*g.gpf;
+    const rnt=(w&&t<=p.renty)? p.rent*12*px:0;
+    const edu=(w&&p.nkid>0&&t>=p.eduy0&&t<p.eduy0+p.eduyn)? p.edu*p.nkid*px:0;
+    const oth=sal*p.oth;
+
+    // ค่ารักษาพยาบาลคิดตามอายุจริงของแต่ละคน
+    const unit=a2=>MEDBASE*medMult(a2)*p.medF;
+    const nSelf=1+p.spouse;
+    const rSelf=nSelf*unit(age);
+    const kAge=t-p.kidBorn;
+    const nKid=(p.nkid>0&&kAge>=0&&kAge<=19)? p.nkid:0;
+    const rKid=nKid*unit(Math.max(kAge,0));
+    const pAge=age+p.parGap;
+    const nPar=(p.nPar>0&&pAge<=p.parDie)? p.nPar:0;
+    const rPar=nPar*unit(pAge);
+    const mSelf=rSelf*mx, mKid=rKid*mx, mPar=rPar*mx;
+    const med=mSelf+mKid+mPar;
+
+    const pn=w?0:PN*12*Math.pow(1+g.padj,t-ns-1);
+    let lump=0;
+    if(age===g.ageR) lump+=dl1;
+    if(age===65&&!w) lump+=dlT-dl1;
+    if(t===N) lump+=takd+fune;
+    const tot=sal+pos+gpf+rnt+edu+oth+med+pn+lump;
+    s.sal+=sal; s.pos+=pos; s.gpf+=gpf; s.rent+=rnt; s.edu+=edu; s.oth+=oth;
+    s.medSelf+=mSelf; s.medKid+=mKid; s.medPar+=mPar;
+    rl.medSelf+=rSelf; rl.medKid+=rKid; rl.medPar+=rPar;
+    py.medSelf+=nSelf; py.medKid+=nKid; py.medPar+=nPar;
+    if(w) s.medW+=med; else s.medR+=med;
+    s.pen+=pn; s.lump+=lump;
+    nom+=tot; real+=tot/px;
     rows.push({t,age,w,tot});
   }
-  return {rows,sum,nom,real,pv,ns,N,pen:PN,grow};
+  const medNom=s.medSelf+s.medKid+s.medPar;
+  const medReal=rl.medSelf+rl.medKid+rl.medPar;
+  const pyAll=py.medSelf+py.medKid+py.medPar;
+  return {rows,s,rl,py,nom,real,ns,N,pen:PN,med:medNom,medReal,
+          perHead: pyAll? medReal/pyAll : 0};
 }
 
 const B=v=>(v/1e6).toFixed(1);
 const TH=v=>Math.round(v).toLocaleString("th-TH");
 
 const PARTS=[
- {k:"sal",  n:"เงินเดือน",                 c:"#2F5D4A"},
- {k:"pen",  n:"บำนาญ",                     c:"#4E8570"},
- {k:"medR", n:"ค่ารักษาพยาบาลหลังเกษียณ",  c:"#9C7B2A"},
- {k:"medW", n:"ค่ารักษาพยาบาลช่วงทำงาน",   c:"#C0A35E"},
- {k:"pos",  n:"เงินประจำตำแหน่ง",           c:"#7FA694"},
- {k:"lump", n:"บำเหน็จและเงินก้อน",         c:"#B6CCBF"},
- {k:"gpf",  n:"เงินสมทบ กบข. ที่รัฐจ่าย",   c:"#8E9C8F"},
- {k:"edu",  n:"ค่าการศึกษาบุตร",            c:"#A8B3A4"},
- {k:"oth",  n:"ค่าตอบแทนอื่น",              c:"#C3CABC"},
- {k:"rent", n:"ค่าเช่าบ้าน",                c:"#D3D8CD"}
+ {k:"sal",n:"เงินเดือน",c:"#27523F"},
+ {k:"pen",n:"บำนาญ",c:"#4E8069"},
+ {k:"medR",n:"ค่ารักษาพยาบาลหลังเกษียณ",c:"#8A6A1E"},
+ {k:"medW",n:"ค่ารักษาพยาบาลช่วงรับราชการ",c:"#B99B4E"},
+ {k:"pos",n:"เงินประจำตำแหน่งและเงินเพิ่มพิเศษ",c:"#8AAE9A"},
+ {k:"lump",n:"บำเหน็จและเงินก้อน",c:"#B4CCBD"},
+ {k:"gpf",n:"เงินสมทบ กบข. ที่รัฐจ่าย",c:"#7E8D80"},
+
 ];
 
 function render(){
-  const M = model(P,G);
-  if(!M) return;
-  const vals=[M.nom,M.real,M.pv];
+  const M=model(P,G); if(!M) return;
+  const vals=[M.nom,M.real];
+  const top=Math.max(Math.max(...vals)*1.05,44e6);
   vals.forEach((v,i)=>{
     document.getElementById("n"+i).textContent=B(v);
+    document.getElementById("f"+i).style.width=(v/top*100)+"%";
+    document.getElementById("m"+i).style.left=(40e6/top*100)+"%";
     const d=v-40e6;
-    document.getElementById("d"+i).innerHTML = Math.abs(d)<5e4 ? "เท่ากับตัวเลข 40 ล้านพอดี"
-      : (d>0?"สูงกว่า 40 ล้าน <b>+":"ต่ำกว่า 40 ล้าน <b>−")+B(Math.abs(d))+" ล้าน</b>";
+    document.getElementById("d"+i).innerHTML = Math.abs(d)<5e4?"เท่ากับตัวเลข 40 ล้านพอดี"
+      :(d>0?"สูงกว่า 40 ล้าน <b>+":"ต่ำกว่า 40 ล้าน <b>−")+B(Math.abs(d))+" ล้าน</b>";
   });
+  document.getElementById("scalenote").textContent=
+    "แถบทั้งสองใช้มาตราส่วนเดียวกัน สุดแถบเท่ากับ "+B(top)+" ล้านบาท";
 
-  // gauges + 40M reference line
-  const top = Math.max(Math.max(...vals)*1.06, 44e6);
-  vals.forEach((v,i)=>document.getElementById("g"+i).style.height=(v/top*100)+"%");
-  const gEl=document.querySelector(".gauge"), cl=document.getElementById("cline");
-  if(gEl && gEl.offsetHeight){
-    const r=gEl.getBoundingClientRect(), pr=document.getElementById("cols").getBoundingClientRect();
-    cl.hidden=false;
-    cl.style.top=(r.bottom-pr.top - r.height*(40e6/top))+"px";
-  } else cl.hidden=true;
+  // medical table — แสดงทั้งตัวเงินจริงและราคาปี 2569
+  const rowsM=[
+    ["ตนเอง"+(P.spouse?" และคู่สมรส":""),1+P.spouse,M.s.medSelf,M.rl.medSelf,M.py.medSelf],
+    ["บุตร",P.nkid,M.s.medKid,M.rl.medKid,M.py.medKid],
+    ["บิดามารดา",P.nPar,M.s.medPar,M.rl.medPar,M.py.medPar]
+  ];
+  let html="";
+  rowsM.forEach(([n,c,vn,vr,pyy])=>{
+    html+=`<tr><td>${n}</td><td class="n">${c?c+" คน":"–"}</td>`+
+          `<td class="n">${B(vr)} ล้าน</td><td class="n">${B(vn)} ล้าน</td>`+
+          `<td class="n">${M.medReal>0?(vr/M.medReal*100).toFixed(0)+"%":"–"}</td>`+
+          `<td class="n">${pyy?Math.round(pyy)+" คน-ปี":"–"}</td></tr>`;
+  });
+  html+=`<tr class="tot"><td>รวมค่ารักษาพยาบาล</td><td></td><td>${B(M.medReal)} ล้าน</td>`+
+        `<td>${B(M.med)} ล้าน</td><td>100%</td><td>${Math.round(M.py.medSelf+M.py.medKid+M.py.medPar)} คน-ปี</td></tr>`;
+  document.getElementById("medbody").innerHTML=html;
+  document.getElementById("mednote").innerHTML = P.nPar>0
+    ? `ในราคาปี 2569 ค่ารักษาของบิดามารดา ${P.nPar} คน เท่ากับ <strong>${B(M.rl.medPar)} ล้านบาท</strong> `+
+      `คิดเป็น <strong>${(M.rl.medPar/M.medReal*100).toFixed(0)}%</strong> ของค่ารักษาทั้งหมด ซึ่งใกล้เคียงกับของตัวข้าราชการเองและคู่สมรสรวมกัน `+
+      `แต่ในคอลัมน์ตัวเงินจริงกลับดูน้อยกว่ามาก เพราะพ่อแม่ป่วยในช่วง 20–30 ปีแรกที่ค่าเงินยังไม่เฟ้อ `+
+      `ส่วนตัวข้าราชการเองป่วยหนักในอีก 40–60 ปีข้างหน้าที่ดัชนีค่ารักษาสูงขึ้นเกือบ 10 เท่า `+
+      `ไม่ได้แปลว่ารัฐดูแลพ่อแม่ถูกกว่า`
+    : "ตอนนี้เลือกว่าไม่มีบิดามารดาใช้สิทธิ ลองเปลี่ยนเป็น 2 คนดูว่าตัวเลขรวมขยับขึ้นเท่าไหร่";
+  document.getElementById("medcal").innerHTML =
+    `แบบจำลองคิดค่ารักษาตามอายุจริงของแต่ละคน ที่ตัวคูณปัจจุบันได้ประมาณ `+
+    `<strong>${TH(MEDBASE*medMult(10)*P.medF)}</strong> บาท/ปี สำหรับเด็ก 10 ขวบ `+
+    `<strong>${TH(MEDBASE*medMult(35)*P.medF)}</strong> สำหรับวัย 35 `+
+    `<strong>${TH(MEDBASE*medMult(65)*P.medF)}</strong> สำหรับวัย 65 และ `+
+    `<strong>${TH(MEDBASE*medMult(85)*P.medF)}</strong> สำหรับวัย 85 `+
+    `เฉลี่ยรวมทุกช่วงอายุออกมาที่ <strong>${TH(M.perHead)}</strong> บาท/คน/ปี `+
+    `เทียบกับตัวเลขจริงทั้งระบบซึ่งอยู่ที่ราว 21,200 บาท/คน/ปี`;
 
-  // breakdown
+  // stacked breakdown
   const st=document.getElementById("stack"), lg=document.getElementById("legend");
   st.innerHTML=""; lg.innerHTML="";
   PARTS.forEach(p=>{
-    const v=M.sum[p.k]; if(v<=0) return;
+    const v=M.s[p.k]; if(v<=0) return;
     const d=document.createElement("div");
-    d.style.width=(v/M.nom*100)+"%"; d.style.background=p.c;
-    d.title=p.n+" "+B(v)+" ล้านบาท"; st.appendChild(d);
+    d.style.width=(v/M.nom*100)+"%"; d.style.background=p.c; d.title=p.n+" "+B(v)+" ล้านบาท";
+    st.appendChild(d);
     lg.insertAdjacentHTML("beforeend",
-      `<div class="row"><span class="sw" style="background:${p.c}"></span>
-       <span class="nm">${p.n}</span><span class="amt">${B(v)} ล้าน</span></div>`);
+      `<div class="row"><span class="sw" style="background:${p.c}"></span>`+
+      `<span class="nm">${p.n}</span><span class="amt">${B(v)} ล้าน</span></div>`);
   });
 
   // yearly chart
-  const W=900,H=300,PADL=54,PADB=34,PADT=14,PADR=8;
+  const W=900,H=310,PL=60,PB=36,PT=16,PR=8;
   const mx=Math.max(...M.rows.map(r=>r.tot));
-  const x=i=>PADL+i*(W-PADL-PADR)/(M.rows.length-1);
-  const y=v=>PADT+(1-v/mx)*(H-PADT-PADB);
-  let area=`M${x(0)},${H-PADB}`, line="";
+  const x=i=>PL+i*(W-PL-PR)/(M.rows.length-1);
+  const y=v=>PT+(1-v/mx)*(H-PT-PB);
+  let area=`M${x(0)},${H-PB}`, line="";
   M.rows.forEach((r,i)=>{area+=` L${x(i)},${y(r.tot)}`; line+=(i?" L":"M")+x(i)+","+y(r.tot);});
-  area+=` L${x(M.rows.length-1)},${H-PADB} Z`;
+  area+=` L${x(M.rows.length-1)},${H-PB} Z`;
   const rx=x(M.ns);
+  const step=mx>2.4e6?1e6:(mx>1.2e6?5e5:2e5);
   let ticks="";
-  const step = mx>2.4e6?1e6:(mx>1.2e6?5e5:2e5);
-  for(let v=0; v<=mx; v+=step){
-    ticks+=`<line x1="${PADL}" x2="${W-PADR}" y1="${y(v)}" y2="${y(v)}" stroke="#C2CABC" stroke-width="1"/>
-      <text x="${PADL-8}" y="${y(v)+4}" text-anchor="end" font-size="12" fill="#4E5A52">${(v/1e6).toFixed(1)}</text>`;
-  }
+  for(let v=0;v<=mx;v+=step) ticks+=
+    `<line x1="${PL}" x2="${W-PR}" y1="${y(v)}" y2="${y(v)}" stroke="#B0BAA9" stroke-width="1"/>`+
+    `<text x="${PL-9}" y="${y(v)+5}" text-anchor="end" font-size="14" font-weight="500" fill="#3F4A42">${(v/1e6).toFixed(1)}</text>`;
   let ages="";
   M.rows.forEach((r,i)=>{ if(r.age%10===0) ages+=
-    `<text x="${x(i)}" y="${H-12}" text-anchor="middle" font-size="12" fill="#4E5A52">${r.age}</text>`;});
+    `<text x="${x(i)}" y="${H-11}" text-anchor="middle" font-size="14" font-weight="500" fill="#3F4A42">${r.age}</text>`;});
   document.getElementById("chart").innerHTML=
-   `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="กราฟรายจ่ายรายปี">
-      ${ticks}
-      <path d="${area}" fill="#B6CCBF" opacity=".55"/>
-      <path d="${line}" fill="none" stroke="#2F5D4A" stroke-width="2.4"/>
-      <line x1="${rx}" x2="${rx}" y1="${PADT}" y2="${H-PADB}" stroke="#17211C" stroke-width="1.5" stroke-dasharray="5 4"/>
-      <text x="${rx+7}" y="${PADT+14}" font-size="13" fill="#17211C" font-weight="600">เกษียณ</text>
-      <text x="${PADL-8}" y="${PADT-1}" text-anchor="end" font-size="11" fill="#4E5A52">ล้านบาท</text>
-      <text x="${W-PADR}" y="${H-12}" text-anchor="end" font-size="12" fill="#4E5A52">อายุ</text>
+   `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="กราฟรายจ่ายรายปีตลอดชีวิต">
+      ${ticks}${ages}
+      <path d="${area}" fill="#8AAE9A" opacity=".5"/>
+      <path d="${line}" fill="none" stroke="#27523F" stroke-width="3"/>
+      <line x1="${rx}" x2="${rx}" y1="${PT}" y2="${H-PB}" stroke="#131B16" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="${rx+8}" y="${PT+15}" font-size="15" font-weight="700" fill="#131B16">เกษียณ</text>
+      <text x="${PL-9}" y="${PT-2}" text-anchor="end" font-size="12" font-weight="600" fill="#3F4A42">ล้านบาท</text>
+      <text x="${W-PR}" y="${H-11}" text-anchor="end" font-size="14" font-weight="600" fill="#3F4A42">อายุ</text>
     </svg>`;
-  document.getElementById("ccap").textContent =
+  document.getElementById("ccap").textContent=
    `รับราชการ ${M.ns} ปี รับบำนาญ ${M.N-M.ns} ปี บำนาญเดือนแรกหลังเกษียณ ${TH(M.pen)} บาท `+
-   `ยอดสูงสุดคือปีที่เสียชีวิต เพราะมีบำเหน็จตกทอด 30 เท่าและเงินค่าทำศพจ่ายทายาทในปีเดียว`;
+   `ยอดพุ่งสูงสุดที่ปีสุดท้าย เพราะบำเหน็จตกทอด 30 เท่าและเงินค่าทำศพจ่ายให้ทายาทในปีเดียว`;
 }
 
 function buildKnobs(){
   const box=document.getElementById("knobs"); box.innerHTML="";
   KNOBS.forEach(kb=>{
-    const src = kb.g? G : P, v = src[kb.k];
+    const src=kb.g?G:P, v=src[kb.k];
     const d=document.createElement("div");
     d.className="knob"+(kb.star?" starred":"");
-    d.innerHTML=`<label for="k_${kb.k}"><span>${kb.label}</span><span class="val" id="v_${kb.k}">${kb.fmt(v)}</span></label>
-      <input type="range" id="k_${kb.k}" min="${kb.min}" max="${kb.max}" step="${kb.step}" value="${v}">
-      <div class="hint">${kb.hint}</div>`;
-    box.appendChild(d);
-    d.querySelector("input").addEventListener("input",e=>{
-      const nv=parseFloat(e.target.value);
-      (kb.g?G:P)[kb.k]=nv;
-      document.getElementById("v_"+kb.k).textContent=kb.fmt(nv);
-      render();
-    });
+    if(kb.type==="seg"){
+      d.innerHTML=`<label><span>${kb.label}</span></label><div class="seg">`+
+        kb.opts.map(o=>`<button type="button" data-v="${o[1]}" aria-pressed="${o[1]==v}">${o[0]}</button>`).join("")+
+        `</div><div class="hint">${kb.hint}</div>`;
+      box.appendChild(d);
+      d.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{
+        (kb.g?G:P)[kb.k]=+b.dataset.v;
+        d.querySelectorAll(".seg button").forEach(o=>o.setAttribute("aria-pressed",o===b));
+        render();
+      }));
+    }else{
+      d.innerHTML=`<label for="k_${kb.k}"><span>${kb.label}</span><span class="val" id="v_${kb.k}">${kb.fmt(v)}</span></label>
+        <input type="range" id="k_${kb.k}" min="${kb.min}" max="${kb.max}" step="${kb.step}" value="${v}">
+        <div class="hint">${kb.hint}</div>`;
+      box.appendChild(d);
+      d.querySelector("input").addEventListener("input",e=>{
+        const nv=parseFloat(e.target.value);
+        (kb.g?G:P)[kb.k]=nv;
+        document.getElementById("v_"+kb.k).textContent=kb.fmt(nv);
+        render();
+      });
+    }
   });
 }
 function loadPreset(i){
   pi=i; P={...PRESETS[i]}; G={...GLOBAL};
-  document.querySelectorAll(".tabs button").forEach(b=>
-    b.setAttribute("aria-pressed", b.dataset.p==String(i)));
+  document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.p==String(i)));
   document.getElementById("pdesc").textContent=PRESETS[i].desc;
   buildKnobs(); render();
 }
-document.querySelectorAll(".tabs button").forEach(b=>
+document.getElementById("tabs").innerHTML=
+  PRESETS.map((p,i)=>`<button type="button" data-p="${i}" aria-pressed="${i===1}">${p.name}</button>`).join("");
+document.querySelectorAll("#tabs button").forEach(b=>
   b.addEventListener("click",()=>loadPreset(+b.dataset.p)));
 document.getElementById("reset").addEventListener("click",()=>loadPreset(pi));
-addEventListener("resize",render);
 loadPreset(1);
-if(document.fonts&&document.fonts.ready) document.fonts.ready.then(render);
-addEventListener("load",render);
 </script>
