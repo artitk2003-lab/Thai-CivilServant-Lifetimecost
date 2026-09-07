@@ -112,6 +112,17 @@ figure{margin:0}
 figcaption{font-size:15px;color:var(--ink-2);margin-top:12px;max-width:62ch}
 svg{display:block;width:100%;height:auto}
 
+.grab{margin-top:56px;border-top:3px solid var(--ink);padding-top:30px}
+.grab h2{margin-bottom:6px}
+.grab .lede{margin-bottom:22px}
+.files{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.file{display:block;padding:20px 22px;background:var(--card);border:2px solid var(--ink);
+  text-decoration:none;color:var(--ink);transition:background .15s}
+.file:hover,.file:focus-visible{background:var(--green);color:#fff;outline:none}
+.file:hover .fdesc,.file:focus-visible .fdesc{color:#DCE7E0}
+.file .fname{font-weight:700;font-size:17px;display:block}
+.file .fdesc{display:block;margin-top:6px;font-size:15px;color:var(--ink-2);line-height:1.5;font-weight:500}
+@media(max-width:760px){.files{grid-template-columns:1fr}}
 .notes{border-top:3px solid var(--ink);margin-top:60px;padding-top:30px;
   display:grid;grid-template-columns:1fr 1fr;gap:34px 44px}
 .notes h3{font-size:18px;margin-bottom:10px}
@@ -211,6 +222,24 @@ svg{display:block;width:100%;height:auto}
   </figure>
 </section>
 
+<section class="grab">
+  <p class="eyebrow">เอาไปเล่นเองต่อ</p>
+  <h2>โค้ดและสเปรดชีต</h2>
+  <p class="lede">ทุกอย่างเปิดหมด ไม่มีตัวเลขไหนที่ตรวจสอบไม่ได้ ถ้าไม่เห็นด้วยกับสมมติฐานข้อไหน
+     แก้ในสเปรดชีตแล้วดูว่าคำตอบเปลี่ยนไปแค่ไหน สเปรดชีตมีรายละเอียดมากกว่าหน้าเว็บ
+     ทั้งการคำนวณทีละปี 24 คอลัมน์ ตารางความไวต่อเงินเฟ้อ และคอลัมน์มูลค่าปัจจุบันที่หน้านี้ไม่ได้แสดง</p>
+  <div class="files">
+    <a class="file" href="model.xlsx" download>
+      <span class="fname">ดาวน์โหลดสเปรดชีต (.xlsx)</span>
+      <span class="fdesc">คำนวณทีละปีตั้งแต่วันบรรจุถึงวันเสียชีวิต ครบทั้ง 3 กรณี ทุกช่องเป็นสูตร แก้สมมติฐานแล้วคำนวณใหม่ได้ทันที</span>
+    </a>
+    <a class="file" href="https://github.com/artitk2003-lab/Thai-CivilServant-Lifetimecost" target="_blank" rel="noopener">
+      <span class="fname">ดูโค้ดทั้งหมดใน GitHub</span>
+      <span class="fdesc">โค้ดหน้าเว็บ สเปรดชีต และคำอธิบายวิธีคำนวณกับข้อจำกัดฉบับเต็ม เจอจุดที่ผิดเปิด issue ได้เลย</span>
+    </a>
+  </div>
+</section>
+
 <div class="notes">
   <div>
     <h3>วิธีคำนวณ</h3>
@@ -250,7 +279,7 @@ svg{display:block;width:100%;height:auto}
     <p><strong>“ราคาปี 2569” ไม่เท่ากับมูลค่าปัจจุบัน</strong> ตัวเลขนี้ถอดเงินเฟ้อออกแล้ว แต่ยังไม่ได้คิดลด
        เงิน 1 ล้านบาทที่รัฐจ่ายอีก 50 ปีข้างหน้ายังถูกนับเท่ากับ 1 ล้านบาทวันนี้
        ถ้าคิดลดด้วยอัตราจริง 1–3% แบบที่ใช้ในงานการคลัง ตัวเลขจะต่ำกว่านี้อีกพอสมควร
-       ดูตัวเลขมูลค่าปัจจุบันได้ในไฟล์สเปรดชีต</p>
+       ดูตัวเลขมูลค่าปัจจุบันได้ใน <a href="model.xlsx" download>ไฟล์สเปรดชีต</a></p>
     <p>และตัวเลขทั้งหมดเป็นด้านรายจ่ายล้วน ไม่หักภาษีเงินได้ที่ข้าราชการจ่ายคืนรัฐ
        ไม่ตีมูลค่าบริการสาธารณะที่ผลิตออกมา และไม่รวมค่าสำนักงาน ครุภัณฑ์ ค่าฝึกอบรม</p>
     <h3 style="margin-top:20px">ที่มาของอัตราที่ใช้</h3>
